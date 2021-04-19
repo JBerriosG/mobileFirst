@@ -129,13 +129,22 @@ main{
     color: #757575;
 }
 /* tables */
+.main-tables-container{
+    display: flex;
+    height: 370px;
+    overflow-x: scroll;
+    overscroll-behavior-x: contain;
+    scroll-snap-type: x proximity;
+
+}
 .main-currency-table,
 .main-commission-table{
     width: 70%;
+    scroll-snap-align: center;
     min-width: 235px;
     max-width: 500px;
     height: 360px;
-    margin: 0 auto;
+    margin: 0 30px;
     font-family: 'Inter', sans-serif;
 }
 .main-currency-table .currency-table--title,
@@ -395,9 +404,9 @@ main{
     left: calc(50% - 60px);
     top: -15px;
     font-size: 1.2rem;
-    background-color: var(--bitcoin-orange);
+    background-color: var(--soft-orange);
     border-radius: 8px;
-    color: var(--just-white);
+    color: var(--warm-black);
 }
 .basic{
     position: absolute;
@@ -408,9 +417,9 @@ main{
     left: calc(50% - 60px);
     top: -15px;
     font-size: 1.2rem;
-    background-color: var(--secodary-blue);
+    background-color: lightblue;
     border-radius: 8px;
-    color: var(--just-white);
+    color: var(--warm-black);
 }
 .limitado{
     position: absolute;
@@ -464,6 +473,9 @@ main{
     color: var(--black);
     font-family: 'DM Sans', sans-serif;
 }
+.border__color{
+    border-color: var(--secodary-blue);
+}
 .plan-card--ca span{
     display: inline-block;
     width: 20px;
@@ -471,10 +483,22 @@ main{
     background-image: url('./assets/icons/orange-right-arrow.svg');
     vertical-align: text-bottom;
 }
-.card__background{
+.card__background--basic{
+    background-color: var(--secodary-blue);
+}
+.card__background--recommended{
+    background-color: var(--bitcoin-orange);
+}
+.card__background--limit{
     background-color: var(--warm-black);
 }
-.btn_background{
+.btn_background--basic{
+    background-color: lightblue;
+}
+.btn_background--recommended{
+    background-color: var(--soft-orange);
+}
+.btn_background--limit{
     background-color: var(--black);
 }
 .text__color{
